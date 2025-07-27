@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Login Test...</title>
+</head>
+
+<body>
+    <div class="LoginContainer">
+        <div class="ImageContainer">
+            <img src="./Image/Imag_Login.png" alt="">
+        </div>
+        <div class="FormContainer">
+            <!-- Title of the Login page -->
+            <div class="HeaderTitle">
+                <h2 class="title_login">Login</h2>
+                <p class="subtitle_login">Please enter your login details to sign in</p>
+            </div>
+            <form action="#" id="FormElement">
+                <div class="Input_group">
+                    <label for="email" class="label_input">Email</label>
+                    <input type="text" id="email" name="email" placeholder="Email address...">
+                    <small>message err</small>
+                </div>
+                <div class="Input_group">
+                    <label for="password" class="label_input">Password</label>
+                    <input type="password" id="password" name="password" placeholder="password">
+                    <small>message err</small>
+                </div>
+
+                <div class="Checkbox-and-link">
+                    <label class="Custom_label_Checkbox">
+                        <input type="checkbox" />
+                        <div class="input_checker"><i class="fa-solid fa-check"></i></div>
+                        Keep me Logged in
+                    </label>
+                    <a href="#" class="forget_password">
+                        Forget password ?
+                    </a>
+                </div>
+                <button class="logIn_btn">Log in</button>
+            </form>
+            <!-- if the user dotn have any account !!! so they can go the Sign up page !-->
+            <div class="auth_signup">
+                <p class="auth_signup-text">Don’t have an account ?</p>
+                <a href="#" class="auth_signup-link">
+                    Sign up
+                </a>
+            </div>
+            <!-- give some option to get log in to the system -->
+            <div class="login-option_link">
+                <div class="tltie_option_link">
+                    <span class="line"></span>
+                    <span class="tltie_option_link_text"">or countinue with</span>
+                    <span class=" line"></span>
+                </div>
+                <div class="social-login-link ">
+                    <a href="#">
+                        <img src="./Icons/devicon_google.png" alt="google icon" class="google_icon">
+                    </a>
+                    <a href="#">
+                        <img src="./Icons/logos_facebook.png" alt="facebooke icon" class="facebook_icon">
+                    </a>
+                    <a href="#">
+                        <img src="./Icons/mdi_github.png" alt="github icon" class="githubIcon">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="./App.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --Primary-Color:#7754F6
+}
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+html{
+    font-size: 62.5%;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #eee;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+}
+
+
+
+.LoginContainer{
+    width: 1440px;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+  
+    gap: 2.4rem; 
+   
+    background-color: #ffff;
+    border-radius: 2rem;
+}
+
+.ImageContainer{
+    grid-column: 1 / span 7;
+    overflow: hidden;
+    height: 100%;
+   
+}
+.ImageContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;   
+}
+
+
+.FormContainer{
+    grid-column: 8 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-left:9rem;
+    padding-right: 8rem;
+    width: 100%;
+}
+.HeaderTitle{
+
+margin-bottom: 3.2rem;
+text-align: left;
+width: 100%;
+}
+.title_login{
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 1.6rem;
+   
+}
+.subtitle_login{
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #777777;
+    text-wrap: nowrap;
+}
+.Input_group{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 3rem;
+   
+}
+
+.label_input{
+    display: inline-block;
+    margin-bottom: 0.8rem;
+    font-size: 1.6rem;
+    color: #777777;
+    font-weight: 600;
+}
+
+input:focus{
+    outline-color: var(--Primary-Color) ;
+}
+/* Form Style started from this section */
+small{
+   display: inline-block;
+   font-size: 1.4rem;
+   margin-top: 1rem;
+   font-weight: 300 ;
+   color: #B4B4B4;
+   opacity: 0;
+   pointer-events: none;
+   
+}
+#FormElement{
+    width: 100%;
+    min-height: 10rem;
+}
+
+input{
+    font-size: 1.6rem;
+    padding: 1.8rem 2.4rem;
+    width: 100%;
+    border: 2px solid #eee;
+    border-radius: 1rem;
+}
+
+.Input_group_CheckBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:flex-start;
+    
+    
+}
+#keeplogged{
+    background-color: red;
+    width: 3rem;
+}
+.keeplogged_label{
+    font-size: 1.6rem;
+}
+.btn_submit{
+    margin-top:1rem; 
+}
+
+.seccuss_border{
+    border-color: green;
+}
+
+.Error .label_input {
+    color:red; 
+}
+.Error small {
+    color:red; 
+    opacity: 1;
+}
+.Error input {
+     border-color: red;
+     outline-color: red;
+     background-color: rgba(255, 199, 199, 0.185);
+}
+
+.Error input::placeholder {
+     color:rgba(255, 0, 0, 0.226)
+}
+.Success input::placeholder {
+     color:green 
+}
+.Success input {
+     border-color: green;
+   background-color:rgba(0, 128, 0, 0.226)
+}
+
+input:-webkit-autofill {
+  background-color: white ;
+  transition: background-color 5000s ease-in-out 0s; /* Chrome trick */
+  -webkit-text-fill-color: #000 !important;
+}
+
+.Success input:-webkit-autofill {
+  background-color: green !important;
+  transition: background-color 5000s ease-in-out 0s; /* Chrome trick */
+  -webkit-text-fill-color: #000 !important;
+}
+.Checkbox-and-link{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 5.8rem;
+}
+
+.Custom_label_Checkbox{
+  font-size:1.6rem;
+  color: #868686dd;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding-left: 3.5rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 100%;
+  min-height: 2.5rem;
+}
+
+.Custom_label_Checkbox input {
+    position: absolute;
+    height: 0;
+    width: 0;
+    cursor: pointer;
+    opacity: 0;
+
+}
+
+.input_checker{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #ffffff;
+  border-radius: .5rem;
+  border: 2px solid #a0a0a0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.fa-check{
+    font-size: 1.4rem;
+    opacity: 0;
+    color: white;
+}
+
+.Custom_label_Checkbox input:checked + .input_checker {
+    opacity: 1;
+   background-color: var(--Primary-Color);
+   border: 2px solid var(--Primary-Color)#345985;
+   
+}
+
+.Custom_label_Checkbox input:checked + .input_checker .fa-check{
+    opacity: 1;
+ 
+   
+}
+.forget_password{
+    color: var(--Primary-Color);
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-decoration: underline;
+    text-wrap: nowrap;
+    display: block;
+}
+
+
+.logIn_btn{
+    width: 100%;
+    padding: 1.6rem 1.6rem;
+    background-color: var(--Primary-Color);
+    color: #ffff;
+    border-radius: 1rem;
+    outline: none;
+    border: none;
+    font-size: 2.4rem;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-top: 3.2rem;
+    cursor: pointer;
+    box-shadow: 0 0.4rem 0.8rem #6C4CE0;
+    transition: all .3s ease;
+    transform: scale(1);
+
+}
+
+.logIn_btn:hover{
+     background-color: #5a3fd1; /* کمی تیره‌تر از رنگ اصلی */
+    transition: all .3s ease;
+    box-shadow: 0  0.4rem 1.2rem #6C4CE0;
+    transform: scale(1.01);
+}
+
+
+.auth_signup{
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 2.4rem;
+    align-self: flex-start;
+}
+
+.auth_signup-text{
+   font-weight: 500;
+   color: #4b4b4b;
+}
+
+.auth_signup-link{
+    color: var(--Primary-Color);
+    font-weight: 600;
+    margin-left: 0.8rem;
+}
+
+
+.login-option_link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+
+
+.tltie_option_link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 3.2rem;
+}
+
+.tltie_option_link .line {
+    width: 100%;
+    height: 0.2rem;
+    background-color: #a3a3a381;;
+}
+
+.tltie_option_link_text{
+    margin: 0px 2rem;
+    text-wrap: nowrap;
+    font-size: 1.4rem;
+    color: #a3a3a3;
+}
+
+
+.social-login-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2.4rem;
+}
+.social-login-link a img {
+    margin: 0 3rem;
+}
+.google_icon , .facebook_icon {
+    width:4rem;
+    height: 4rem;
+}
+
+.githubIcon{
+    width: 5rem !important;
+    height: 5rem !important;
+}
+
